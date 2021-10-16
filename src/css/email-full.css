@@ -1,0 +1,140 @@
+.email-full {
+  position: absolute;
+  top: 0;
+  right: 60px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.email-full__content {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: calc(100vh - 124px);
+  margin-left: 20px;
+}
+
+.email-full__head .MuiButtonBase-root,
+.email-full__topic__right .MuiButtonBase-root,
+.email-full__about__info__right .MuiButtonBase-root {
+  padding: 6px;
+  margin: 6px;
+}
+
+.email-full__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: 1rem;
+  border-bottom: 1px solid #dadada;
+}
+
+.email-full__head__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.email-full__head-separator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #dadada;
+}
+
+.email-full__head-separator:last-of-type {
+  border-right: none;
+}
+
+.email-full__head__backbutton {
+  margin-right: 10px !important;
+}
+
+.email-full__head__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.email-full__head__right>small {
+  padding: 0 10px;
+}
+
+.email-full__topic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 4px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.email-full__topic h2 {
+  font-weight: 400;
+}
+
+.email-full__topic__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.email-full__about,
+.email-full__about__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.email-full__about__info .MuiAvatar-root {
+  margin-right: 1rem;
+}
+
+.email-full__about__info>p {
+  font-size: 1rem;
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.email-full__about__info>small::before {
+  content: "<";
+}
+
+.email-full__about__info>small::after {
+  content: ">";
+}
+
+.email-full__about__info__right__print {
+  margin-left: 1rem !important;
+}
