@@ -5,11 +5,11 @@ import Emails from "./Emails";
 import Aside from "./Aside";
 import EmailWindow from "./EmailWindow";
 
-function App({ openNewEmail }) {
-  const [newEmailWindowOpen, setNewEmailWindowOpen] = useState(false);
-  useEffect(() => {
-    setNewEmailWindowOpen(!newEmailWindowOpen);
-  }, [openNewEmail]);
+function App() {
+  const [newEmailWindowOpen, setNewEmailWindowOpen] = useState(true);
+  // useEffect(() => {
+  //   setNewEmailWindowOpen(!newEmailWindowOpen);
+  // }, []);
 
   return (
     <div className="app">

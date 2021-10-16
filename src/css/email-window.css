@@ -4,27 +4,43 @@
   height: 600px;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
-  box-shadow: 0 0 10px 4px rgb(216, 216, 216);
+  -webkit-box-shadow: 0 0 10px 4px #d8d8d8;
+          box-shadow: 0 0 10px 4px #d8d8d8;
   background: white;
 }
+
 .email-window__header {
   height: 40px;
-  background: black;
+  background: #404040;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
-  color: white;
+  color: #fff;
   padding: 6px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .email-window__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .email-window__controls svg {
   cursor: pointer;
+  fill: #b3b3b3;
 }
+
 .email-window__emailbody {
   height: 500px;
   padding: 4px 15px;
@@ -32,22 +48,46 @@
 
 /* Inputs */
 .email-window__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 6px 0 8px 0;
   margin-bottom: 5px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #eceff1;
 }
+
 .email-window__input input {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   background: none;
   border: none;
   outline: none;
 }
 
+.email-window__input input::-webkit-input-placeholder {
+  color: #b3b3b3;
+}
+
+.email-window__input input:-ms-input-placeholder {
+  color: #b3b3b3;
+}
+
+.email-window__input input::-ms-input-placeholder {
+  color: #b3b3b3;
+}
+
+.email-window__input input::placeholder {
+  color: #b3b3b3;
+}
+
 .email-window-cc-options span {
   padding: 0 6px;
   cursor: pointer;
+  color: #b3b3b3;
 }
 
 textarea {
@@ -62,29 +102,43 @@ textarea {
 }
 
 /* text options  */
-
 .email-window__text-options {
   visibility: hidden;
   position: absolute;
   bottom: 62px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex: 1;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 6px;
-  box-shadow: 0 4px 10px 4px rgb(216, 216, 216);
+  -webkit-box-shadow: 0 4px 10px 4px #d8d8d8;
+          box-shadow: 0 4px 10px 4px #d8d8d8;
   background: white;
 }
+
 .options-open {
   visibility: visible;
 }
+
 .email-window__text-options svg {
   margin: 5px;
   cursor: pointer;
+  -webkit-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
   border-radius: 4px;
+  fill: #767676;
 }
+
 .email-window__text-options svg:hover {
   background-color: #ececec;
 }
@@ -93,29 +147,57 @@ textarea {
   font-size: 12px;
   margin-left: 4px;
 }
+
 .corrections,
 .text-font-select,
 .font-size-select,
 .text-style,
 .misc,
 .more {
-  border-right: 1px solid black;
+  border-right: 1px solid #eceff1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0 6px;
 }
+
 .more {
   border-right: none;
 }
-/* Footer */
 
+/* Footer */
 .email-window__footer-options {
   height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .email-window__footer-options div {
   padding: 10px 0;
 }
+
+.email-window__footer-options svg {
+  fill: #767676;
+}
+
+.btn-primary {
+  background: #1a73e8 !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  text-transform: capitalize !important;
+  margin-right: 20px !important;
+}
+/*# sourceMappingURL=email-window.css.map */

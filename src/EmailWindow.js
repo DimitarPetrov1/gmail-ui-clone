@@ -29,7 +29,7 @@ const EmailWindow = () => {
   return (
     <div className="email-window__wrap">
       <div className="email-window__header">
-        <p style={{ fontSize: "14px", fontWeight: 600 }}>New Message</p>
+        <p style={{ fontSize: ".875rem", fontWeight: 600 }}>New Message</p>
         <div className="email-window__controls">
           <Minimize />
           <Height style={{ transform: "rotate(45deg)" }} />
@@ -85,35 +85,33 @@ const EmailWindow = () => {
         </div>
         <div className="email-window__footer-options">
           <div>
-            <Button variant="contained" style={{ marginRight: "20px" }}>
-              Send
-            </Button>
+            <Button className="btn-primary">Send</Button>
             <IconButton
               size="small"
               onClick={() => setTextOptionsOpen(!textOptionsOpen)}
               style={textOptionsOpen ? { background: "#ececec" } : null}
             >
-              <FormatColorText />
+              <FormatColorText fontSize="small" />
             </IconButton>
             <IconButton size="small">
-              <AttachFile />
+              <AttachFile fontSize="small" />
             </IconButton>
             <IconButton size="small">
-              <Link />
+              <Link fontSize="small" />
             </IconButton>
             <IconButton size="small">
-              <InsertEmoticon />
+              <InsertEmoticon fontSize="small" />
             </IconButton>
             <IconButton size="small">
-              <Image />
+              <Image fontSize="small" />
             </IconButton>
           </div>
           <div>
             <IconButton size="small">
-              <MoreVert />
+              <MoreVert fontSize="small" />
             </IconButton>
             <IconButton size="small">
-              <Delete />
+              <Delete fontSize="small" />
             </IconButton>
           </div>
         </div>
