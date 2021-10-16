@@ -32,3 +32,9 @@ button:active {
   height: 100vh;
   overflow: hidden;
 }
+
+.chat-container {
+  position: absolute;
+  right: 100px;
+  bottom: 5px;
+}
