@@ -3,6 +3,7 @@ import "./css/email-window.css";
 import { IconButton } from "@material-ui/core";
 import {
   Minimize,
+  Maximize,
   Height,
   Close,
   Undo,
@@ -24,16 +25,33 @@ import {
   Delete,
 } from "@material-ui/icons";
 import { Button } from "@material-ui/core";
-const EmailWindow = () => {
+const EmailWindow = ({ removeNewEmail }) => {
   const [textOptionsOpen, setTextOptionsOpen] = useState(true);
+  const [minimized, setMinimized] = useState(false);
+
+  const handleMinimize = () => {
+    setMinimized(!minimized);
+  };
+
   return (
-    <div className="email-window__wrap">
+    <div
+      className={
+        minimized
+          ? "email-window__wrap email-window__wrap-minimized"
+          : "email-window__wrap"
+      }
+    >
       <div className="email-window__header">
         <p style={{ fontSize: ".875rem", fontWeight: 600 }}>New Message</p>
         <div className="email-window__controls">
-          <Minimize />
-          <Height style={{ transform: "rotate(45deg)" }} />
-          <Close />
+          {minimized ? (
+            <Maximize fontSize="small" onClick={handleMinimize} />
+          ) : (
+            <Minimize fontSize="small" onClick={handleMinimize} />
+          )}
+
+          <Height fontSize="small" style={{ transform: "rotate(45deg)" }} />
+          <Close fontSize="small" onClick={removeNewEmail} />
         </div>
       </div>
       <div className="email-window__emailbody">
@@ -110,7 +128,7 @@ const EmailWindow = () => {
             <IconButton size="small">
               <MoreVert fontSize="small" />
             </IconButton>
-            <IconButton size="small">
+            <IconButton size="small" onClick={removeNewEmail}>
               <Delete fontSize="small" />
             </IconButton>
           </div>

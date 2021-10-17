@@ -200,4 +200,13 @@ textarea {
   text-transform: capitalize !important;
   margin-right: 20px !important;
 }
+
+.email-window__wrap-minimized {
+  height: 40px;
+  width: 260px;
+}
+
+.email-window__wrap-minimized .email-window__emailbody {
+  display: none;
+}
 /*# sourceMappingURL=email-window.css.map */

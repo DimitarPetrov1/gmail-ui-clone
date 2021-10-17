@@ -1,30 +1,27 @@
 import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  // useHistory,
-  Switch,
-  Route,
-  Link,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import axios from "axios";
 import Email from "./Email";
 import EmailFull from "./EmailFull";
 import IconButton from "@material-ui/core/IconButton";
-import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
-import ReplayIcon from "@material-ui/icons/Replay";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
-import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
-import NavigateNextIcon from "@material-ui/icons/NavigateNext";
-import InboxIcon from "@material-ui/icons/Inbox";
-import GroupIcon from "@material-ui/icons/Group";
-import LocalOfferIcon from "@material-ui/icons/LocalOffer";
-import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
-import NoteIcon from "@material-ui/icons/Note";
-import PlaylistAddCheckIcon from "@material-ui/icons/PlaylistAddCheck";
-import AddIcon from "@material-ui/icons/Add";
+import {
+  ArrowDropDown,
+  Replay,
+  MoreVert,
+  NavigateBefore,
+  NavigateNext,
+  Inbox,
+  Group,
+  LocalOffer,
+  CalendarToday,
+  Note,
+  PlaylistAddCheck,
+  Add,
+} from "@material-ui/icons";
+
 import "./css/emails.css";
 
-function Emails(props) {
+const Emails = (props) => {
   const [emails, setEmails] = useState([]);
 
   useEffect(() => {
@@ -46,12 +43,12 @@ function Emails(props) {
       <div className="emails__head">
         <div className="emails__head-sorting">
           <input type="checkbox" />
-          <ArrowDropDownIcon />
+          <ArrowDropDown />
           <IconButton>
-            <ReplayIcon />
+            <Replay />
           </IconButton>
           <IconButton>
-            <MoreVertIcon />
+            <MoreVert />
           </IconButton>
         </div>
         <div className="emails__head-more">
@@ -59,10 +56,10 @@ function Emails(props) {
             1-{emails.length} of {emails.length}
           </small>
           <IconButton>
-            <NavigateBeforeIcon />
+            <NavigateBefore />
           </IconButton>
           <IconButton>
-            <NavigateNextIcon />
+            <NavigateNext />
           </IconButton>
         </div>
       </div>
@@ -71,15 +68,15 @@ function Emails(props) {
           <Router>
             <div className="emails__sort">
               <div className="emails__sort-item sort-item-primary-mail">
-                <InboxIcon fontSize="small" />
+                <Inbox fontSize="small" />
                 <p>Primary</p>
               </div>
               <div className="emails__sort-item sort-item-social">
-                <GroupIcon fontSize="small" />
+                <Group fontSize="small" />
                 <p>Social</p>
               </div>
               <div className="emails__sort-item sort-item-promotions">
-                <LocalOfferIcon fontSize="small" />
+                <LocalOffer fontSize="small" />
                 <p>Promotions</p>
               </div>
             </div>
@@ -112,26 +109,26 @@ function Emails(props) {
       <div className="emails__aside-right">
         <div className="emails__aside-right-container">
           <IconButton>
-            <CalendarTodayIcon fontSize="small" />
+            <CalendarToday fontSize="small" />
           </IconButton>
           <IconButton>
-            <NoteIcon fontSize="small" />
+            <Note fontSize="small" />
           </IconButton>
           <IconButton>
-            <PlaylistAddCheckIcon fontSize="small" />
+            <PlaylistAddCheck fontSize="small" />
           </IconButton>
           <span className="emails__aside-add">
             <IconButton>
-              <AddIcon fontSize="small" />
+              <Add fontSize="small" />
             </IconButton>
           </span>
         </div>
         <IconButton>
-          <NavigateNextIcon />
+          <NavigateNext />
         </IconButton>
       </div>
     </div>
   );
-}
+};
 
 export default Emails;

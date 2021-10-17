@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Logo from "./img/logo.png";
 import Gplus from "./img/gplus.png";
@@ -35,7 +35,7 @@ import {
 import "./css/aside.css";
 import Avatar from "@material-ui/core/Avatar";
 
-function Aside({ openNewEmail }) {
+const Aside = ({ openNewEmail }) => {
   const useStyles = makeStyles((theme) => ({
     root: {
       width: "100%",
@@ -48,7 +48,7 @@ function Aside({ openNewEmail }) {
   }));
 
   const classes = useStyles();
-  const [expand, setExpand] = React.useState(false);
+  const [expand, setExpand] = useState(false);
 
   return (
     <aside className="aside">
@@ -232,6 +232,6 @@ function Aside({ openNewEmail }) {
       </div>
     </aside>
   );
-}
+};
 
 export default Aside;

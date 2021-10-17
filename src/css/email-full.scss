@@ -74,7 +74,7 @@
   align-items: center;
 }
 
-.email-full__head__right > small {
+.email-full__head__right>small {
   padding: 0 10px;
 }
 
@@ -121,21 +121,20 @@
   margin-right: 1rem;
 }
 
-.email-full__about__info > p {
+.email-full__about__info>p {
   font-size: 1rem;
   margin-right: 8px;
   font-weight: 500;
 }
 
-.email-full__about__info > small::before {
+.email-full__about__info>small::before {
   content: "<";
 }
 
-.email-full__about__info > small::after {
+.email-full__about__info>small::after {
   content: ">";
 }
 
 .email-full__about__info__right__print {
   margin-left: 1rem !important;
 }
-/*# sourceMappingURL=email-full.css.map */

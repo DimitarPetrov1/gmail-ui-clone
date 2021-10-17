@@ -1,32 +1,39 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./css/app.css";
 import Header from "./Header";
 import Emails from "./Emails";
 import Aside from "./Aside";
 import EmailWindow from "./EmailWindow";
 
-function App() {
+const App = () => {
   const [newEmailWindowOpen, setNewEmailWindowOpen] = useState(true);
-  // useEffect(() => {
-  //   setNewEmailWindowOpen(!newEmailWindowOpen);
-  // }, []);
+
+  const handleEmailOpen = () => {
+    setNewEmailWindowOpen(true);
+  };
+
+  const removeNewEmail = () => {
+    setNewEmailWindowOpen(false);
+  };
 
   return (
     <div className="app">
-      <Aside />
+      <Aside openNewEmail={handleEmailOpen} />
       <div className="right-container">
         <Header />
         <Emails />
       </div>
       <div className="chat-container">
-        {newEmailWindowOpen ? <EmailWindow /> : null}
+        {newEmailWindowOpen ? (
+          <EmailWindow removeNewEmail={removeNewEmail} />
+        ) : null}
       </div>
     </div>
   );
-}
+};
 
 // Things to fix:
 // selecting emails- clicking the box just openes the message
-// the email window css- bottom is set to 5px due to overflow!
+// the email window css- bottom is set to 10px due to overflow!
 
 export default App;
